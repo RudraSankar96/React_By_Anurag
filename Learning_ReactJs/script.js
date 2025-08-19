@@ -19,3 +19,13 @@ rightArrow.addEventListener("click", ()=>{
       secondBasket.innerText = secondBasketAppleCount;
     }
   });
+
+  // Move apple left (Basket 2 → Basket 1)
+leftArrow.addEventListener("click", () => {
+  if (secondBasketAppleCount > 0) {
+    secondBasketAppleCount--;
+    firstBasketAppleCount++;
+    firstBasket.innerText = firstBasketAppleCount;
+    secondBasket.innerText = secondBasketAppleCount;
+  }
+});
