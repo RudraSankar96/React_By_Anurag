@@ -12,5 +12,8 @@ firstBasket.innerText= firstBasketAppleCount;
 secondBasket.innerText = secondBasketAppleCount;
 
 rightArrow.addEventListener("click", ()=>{
-
+    firstBasketAppleCount--;
+    firstBasket.innerText= firstBasketAppleCount;
+    secondBasketAppleCount++;
+    secondBasket.innerText = secondBasketAppleCount;
 })
