@@ -3,6 +3,7 @@ const secondBasket = document.querySelector(".basket-2 span")
 
 const rightArrow = document.querySelector(".right-arrow")
 const leftArrow = document.querySelector(".left-arrow")
+const shuffleBtn = document.querySelector(".shuffle");
 
 const totalApples = 10;
 let secondBasketAppleCount = 0;
@@ -29,3 +30,12 @@ leftArrow.addEventListener("click", () => {
     secondBasket.innerText = secondBasketAppleCount;
   }
 });
+
+   // 🎲 Shuffle apples randomly
+    shuffleBtn.addEventListener("click", () => {
+      firstBasketAppleCount = Math.floor(Math.random() * (totalApples + 1));
+      secondBasketAppleCount = totalApples - firstBasketAppleCount;
+      // ✅ Update display after shuffle
+  firstBasket.innerText = firstBasketAppleCount;
+  secondBasket.innerText = secondBasketAppleCount;
+    });
